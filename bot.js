@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/meme$/
+      botRegex = /^\/meme$/,
       botRegex2= /^\/star$/;
   
 
@@ -20,7 +20,7 @@ function respond() {
   }
   if(request.text && botRegex2.test(request.text)) {
     this.res.writeHead(200);
-    postMessage();
+    postMessage2();
     this.res.end();
   } else {
     console.log("don't care");
