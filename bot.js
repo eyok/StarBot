@@ -5,9 +5,20 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/meme$/;
+      botRegex = /^\/meme$/
+      botRegex2= /^\/star$/;
+  
 
   if(request.text && botRegex.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage();
+    this.res.end();
+  } else {
+    console.log("don't care");
+    this.res.writeHead(200);
+    this.res.end();
+  }
+  if(request.text && botRegex2.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
@@ -19,6 +30,25 @@ function respond() {
 }
 
 function postMessage() {
+  var botResponse, options, body, botReq;
+
+  botResponse = " ,_~"""~-,/n
+  .'(_)------`,/n
+  |===========|/n
+  `,---------,'/n
+    ~-.___.-~  ";
+
+  options = {
+    hostname: 'api.groupme.com',
+    path: '/v3/bots/post',
+    method: 'POST'
+  };
+
+  body = {
+    "bot_id" : botID,
+    "text" : botResponse
+  };
+  unction postMessage2() {
   var botResponse, options, body, botReq;
 
   botResponse = cool();
