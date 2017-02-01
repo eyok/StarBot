@@ -18,6 +18,7 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
+  
   if(request.text && botRegex2.test(request.text)) {
     this.res.writeHead(200);
     postMessage2();
@@ -32,11 +33,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = " ,_~"""~-,/n
-  .'(_)------`,/n
-  |===========|/n
-  `,---------,'/n
-    ~-.___.-~  ";
+  botResponse = cool();
 
   options = {
     hostname: 'api.groupme.com',
@@ -48,10 +45,16 @@ function postMessage() {
     "bot_id" : botID,
     "text" : botResponse
   };
-  unction postMessage2() {
+  
+  function postMessage2() {
   var botResponse, options, body, botReq;
 
-  botResponse = cool();
+  botResponse =
+    "    ,_~\"\"\"~-,\n
+  .\'(_)------\`\,\n
+  |===========|\n
+  \`,---------,\'\n
+    ~-.___.-~  ";
 
   options = {
     hostname: 'api.groupme.com',
