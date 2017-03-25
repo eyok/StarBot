@@ -10,8 +10,7 @@ function respond() {
       sign = /^\/sign$/,
       help = /^\/help$/,
       reserve = /^\/reserve$/,
-      drop = /^\/drop$/,
-      shifts = /^\/shifts$/;
+      drop = /^\/drop$/;
   
   if(request.text && meme.test(request.text)) {
     this.res.writeHead(200);
@@ -61,15 +60,6 @@ function respond() {
   if(request.text && drop.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://docs.google.com/a/switchit001.com/forms/d/1nCN3yKNGigaxiI2NOh7sDwrnwf4AvYDwlZujGDFHg_w/edit");
-    this.res.end();
-  } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  }
-  if(request.text && shifts.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://docs.google.com/document/d/1s4FsTDc3tbZMoiKq51gl26msLW2Op2VUhlQTHTtG1bg/edit");
     this.res.end();
   } else {
     console.log("don't care");
