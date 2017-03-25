@@ -23,7 +23,7 @@ function respond() {
   }
   if(request.text && guide.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.ordercosmic.com/admin?verifyMe=39Efkeo93j");
+    postMessage("https://docs.google.com/document/d/1s4FsTDc3tbZMoiKq51gl26msLW2Op2VUhlQTHTtG1bg/edit");
     this.res.end();
   } else {
     console.log("don't care");
@@ -32,7 +32,7 @@ function respond() {
   }
     if(request.text && records.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("~Please have a Cosmic Topper or sign, if you don't we won't help you pay for your ticket.~");
+    postMessage("https://docs.google.com/spreadsheets/d/1vGXOkNTHAcKaxb5w_8uoJC1gsGAoKaBQN5jsHdtOzkk/edit#gid=0");
     this.res.end();
   } else {
     console.log("don't care");
@@ -41,7 +41,7 @@ function respond() {
   }
     if(request.text && orders.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("Cosmobot Commands: /link, /sign, /help (but you knew that), /reserve, /drop, and /shifts. Enjoy!");
+    postMessage("www.ordercosmic.com/admin/orders?verifyMe=rff8e7f5f5w");
     this.res.end();
   } else {
     console.log("don't care");
@@ -50,7 +50,7 @@ function respond() {
   }
   if(request.text && menus.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://docs.google.com/a/switchit001.com/forms/d/1nCN3yKNGigaxiI2NOh7sDwrnwf4AvYDwlZujGDFHg_w/edit");
+    postMessage("www.ordercosmic.com/admin/orders?verifyMe=rff8e7f5f5w");
     this.res.end();
   } else {
     console.log("don't care");
@@ -59,7 +59,7 @@ function respond() {
   }
   if(request.text && help.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://docs.google.com/a/switchit001.com/forms/d/1nCN3yKNGigaxiI2NOh7sDwrnwf4AvYDwlZujGDFHg_w/edit");
+    postMessage("DispatchBot commands: /guide, /records, /orders, /menus, and /help (but you knew that).");
     this.res.end();
   } else {
     console.log("don't care");
