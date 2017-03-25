@@ -10,7 +10,7 @@ function respond() {
       records = /^\/records$/,
       help = /^\/help$/,
       menu = /^\/menus$/,
-      guide = /^\/guide/;
+      guide = /^\/guide$/;
   
   if(request.text && meme.test(request.text)) {
     this.res.writeHead(200);
