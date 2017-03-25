@@ -9,7 +9,7 @@ function respond() {
       orders = /^\/orders$/,
       records = /^\/records$/,
       help = /^\/help$/,
-      menu = /^\/menus$/,
+      menu = /^\/menu$/,
       guide = /^\/guide$/;
   
   if(request.text && meme.test(request.text)) {
@@ -21,6 +21,7 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
+  
   if(request.text && orders.request.text)) {
     this.res.writeHead(200);
     postMessage("www.ordercosmic.com/admin/orders?verifyMe=rff8e7f5f5w");
@@ -30,6 +31,7 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
+  
     if(request.text && records.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://docs.google.com/spreadsheets/d/1vGXOkNTHAcKaxb5w_8uoJC1gsGAoKaBQN5jsHdtOzkk/edit#gid=0");
@@ -39,6 +41,7 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
+  
     if(request.text && help.test(request.text)) {
     this.res.writeHead(200);
     postMessage("Cosmobot Commands: /orders, /records, /help (but you knew that), /menu, /guide. Enjoy!");
@@ -48,6 +51,7 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
+  
   if(request.text && menu.test(request.text)) {
     this.res.writeHead(200);
     postMessage("www.ordercosmic.com/admin/franchises?verifyMe=rff8e7f5f5w");
@@ -57,6 +61,7 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
+  
   if(request.text && guide.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://docs.google.com/document/d/1s4FsTDc3tbZMoiKq51gl26msLW2Op2VUhlQTHTtG1bg/edit");
@@ -65,7 +70,7 @@ function respond() {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
-  }
+  }//else
 
 }//end respond()
 
