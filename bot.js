@@ -6,11 +6,11 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       meme = /^\/meme$/,
-      link = /^\/link$/,
-      sign = /^\/sign$/,
-      help = /^\/help$/,
-      reserve = /^\/reserve$/,
-      drop = /^\/drop$/;
+      guide = /^\/guide$/,
+      records = /^\/records$/,
+      orders = /^\/orders$/,
+      menus = /^\/menus$/,
+      help = /^\/help$/;
   
   if(request.text && meme.test(request.text)) {
     this.res.writeHead(200);
@@ -21,7 +21,7 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
-  if(request.text && link.test(request.text)) {
+  if(request.text && guide.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://www.ordercosmic.com/admin?verifyMe=39Efkeo93j");
     this.res.end();
@@ -30,7 +30,7 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
-    if(request.text && sign.test(request.text)) {
+    if(request.text && records.test(request.text)) {
     this.res.writeHead(200);
     postMessage("~Please have a Cosmic Topper or sign, if you don't we won't help you pay for your ticket.~");
     this.res.end();
@@ -39,7 +39,7 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
-    if(request.text && help.test(request.text)) {
+    if(request.text && orders.test(request.text)) {
     this.res.writeHead(200);
     postMessage("Cosmobot Commands: /link, /sign, /help (but you knew that), /reserve, /drop, and /shifts. Enjoy!");
     this.res.end();
@@ -48,7 +48,7 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
-  if(request.text && reserve.test(request.text)) {
+  if(request.text && menus.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://docs.google.com/a/switchit001.com/forms/d/1nCN3yKNGigaxiI2NOh7sDwrnwf4AvYDwlZujGDFHg_w/edit");
     this.res.end();
@@ -57,7 +57,7 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
-  if(request.text && drop.test(request.text)) {
+  if(request.text && help.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://docs.google.com/a/switchit001.com/forms/d/1nCN3yKNGigaxiI2NOh7sDwrnwf4AvYDwlZujGDFHg_w/edit");
     this.res.end();
