@@ -23,7 +23,7 @@ function respond() {
   }
   if(request.text && guide.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://docs.google.com/document/d/1s4FsTDc3tbZMoiKq51gl26msLW2Op2VUhlQTHTtG1bg/edit");
+    postMessage("https://docs.google.com/document/d/1XkFx5BlbWRut3lLIIOtYds_SLpxcBsCfo4gfwDmItM0/edit");
     this.res.end();
   } else {
     console.log("don't care");
