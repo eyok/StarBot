@@ -11,7 +11,7 @@ function respond() {
       orders = /^\/orders$/,
       menus = /^\/menus$/,
       help = /^\/help$/,
-      business = /^\business$/;
+      business = /^\/business$/;
   
   if(request.text && meme.test(request.text)) {
     this.res.writeHead(200);
