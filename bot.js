@@ -10,7 +10,8 @@ function respond() {
       records = /^\/records$/,
       orders = /^\/orders$/,
       menus = /^\/menus$/,
-      help = /^\/help$/;
+      help = /^\/help$/,
+      business = /^\business$/;
   
   if(request.text && meme.test(request.text)) {
     this.res.writeHead(200);
@@ -60,6 +61,15 @@ function respond() {
   if(request.text && help.test(request.text)) {
     this.res.writeHead(200);
     postMessage("DispatchBot commands: /guide, /records, /orders, /menus, and /help (but you knew that).");
+    this.res.end();
+  } else {
+    console.log("don't care");
+    this.res.writeHead(200);
+    this.res.end();
+  }
+  if(request.text && business.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("www.ordercosmic.com/rocket/business_delivery/order_entry");
     this.res.end();
   } else {
     console.log("don't care");
