@@ -12,7 +12,7 @@ function respond() {
       menus = /^\/menus$/,
       help = /^\/help$/,
       business = /^\/business$/,
-      assing = /^\/assign$/;
+      assign = /^\/assign$/;
   
   if(request.text && meme.test(request.text)) {
     this.res.writeHead(200);
