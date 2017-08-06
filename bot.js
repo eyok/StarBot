@@ -11,11 +11,21 @@ function respond() {
       orders = /^\/orders$/,
       menus = /^\/menus$/,
       help = /^\/help$/,
-      business = /^\/business$/;
+      business = /^\/business$/,
+      assing = /^\/assign$/;
   
   if(request.text && meme.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
+    this.res.end();
+  } else {
+    console.log("don't care");
+    this.res.writeHead(200);
+    this.res.end();
+  }
+  if(request.text && assign.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://www.ordercosmic.com/rocket/dispatch_app_web?tabletId=142&secret=fo39fruf8ds9rjf");
     this.res.end();
   } else {
     console.log("don't care");
