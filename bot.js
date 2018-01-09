@@ -52,7 +52,7 @@ function respond() {
   }
     if(request.text && orders.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("www.ordercosmic.com/admin/orders?verifyMe=rff8e7f5f5w");
+    postMessage("www.ordercosmic.com/admin/orders?verifyMe=0ww9s8djw9ds");
     this.res.end();
   } else {
     console.log("don't care");
@@ -61,7 +61,7 @@ function respond() {
   }
   if(request.text && menus.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("www.ordercosmic.com/admin/orders?verifyMe=rff8e7f5f5w");
+    postMessage("www.ordercosmic.com/admin/orders?verifyMe=0ww9s8djw9ds");
     this.res.end();
   } else {
     console.log("don't care");
